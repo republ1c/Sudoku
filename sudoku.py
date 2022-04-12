@@ -8,7 +8,6 @@ def read_input_data(sud_number):
     with open('input.txt', 'r', encoding='utf8') as f:
         # формирум массив из строк судоку
         for line in f:
-            # if not line.isspace():
             for i in [line[i:i + n] for i in range(0, len(line) - 1, n)]:  # разбиваем судоку строку по n символов
                 sud_box.append([int(ch) for ch in i])  # переводим символы в массив
     # возвращаем судоку в массиве символов исходя из запрощенного номера судоку sud_number
